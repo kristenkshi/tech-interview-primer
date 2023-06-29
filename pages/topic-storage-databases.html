@@ -1,0 +1,114 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Tech Interview Primer - Databases</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body>
+    <div id="body-container">
+
+      <div id="header">
+        <div id="header-title">
+          <h1 class="header-title-text">Tech Interview Primer 📚</h1>
+        </div>
+        <div id="nav">
+          <nav>
+            <ul class="header-nav-ul">
+              <li class="header-nav-li"><a class="header-nav-link" href="/index.html">Home</a></li>
+              <li class="header-nav-li">
+                <div class="dropdown">
+                  <button class="dropbtn">Topics</button>
+                  <div class="dropdown-content">
+                    <a class="header-nav-link" href="/pages/topic-interviews-algorithms-data-structures.html">Interviews - Algorithms and Data Structures</a>
+                    <a class="header-nav-link" href="/pages/topic-interviews-system-design.html">Interviews - System Design</a>
+                    <a class="header-nav-link" href="/pages/topic-interviews-behavioral.html">Interviews - Behavioral</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-layers.html">Networking - Layers</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-dns.html">Networking - DNS</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-ip.html">Networking - IP</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-tcp-vs-udp.html">Networking - TCP vs. UDP</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-client-server-architecture.html">Networking - Client-Server Architecture</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-peer-to-peer-architecture.html">Networking - Peer-to-Peer Architecture</a>
+                    <a class="header-nav-link" href="/pages/topic-storage-databases.html">Storage - Databases</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-consistency-availability-partition-tolerance.html">System Design - Consistency, Availability, and Partition Tolerance</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-availability-patterns.html">System Design - Availability Patterns</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-consistency-patterns.html">System Design - Consistency Patterns</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-performance-vs-scalability.html">System Design - Performance vs. Scalability</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-latency-vs-throughput.html">System Design - Latency vs. Throughput</a>
+                    <a class="header-nav-link" href="/pages/topic-web-website-vs-web-browser.html">Web - Website vs. Web Browser</a>
+                    <a class="header-nav-link" href="/pages/topic-web-api-vs-web-service.html">Web - API vs. Web Service</a>
+                    <a class="header-nav-link" href="/pages/topic-web-http-https.html">Web - HTTP vs. HTTPS</a>
+                    <a class="header-nav-link" href="/pages/topic-web-routes.html">Web - Routes</a>
+                    <a class="header-nav-link" href="/pages/topic-web-rest-api-methods.html">Web - REST API Methods</a>
+                    <a class="header-nav-link" href="/pages/topic-web-rest-vs-grpc.html">Web - REST vs. gRPC</a>
+                  </div>
+                </div>
+              </li>
+              <li class="header-nav-li"><a class="header-nav-link" href="/pages/about.html">About the Author</a></li>
+              <li class="header-nav-li"><a class="header-nav-link" href="/pages/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div id="main-container">
+        <main>
+          <div class="main-section-container">
+            <section class="main-section">
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    Databases
+                  </h2>
+                  <img class="article-inline-img" src="/assets/images/storage-databases.png">
+                  <p class="main-section-article-p-text">
+                    Computer databases refer to organized collections of structured data that are stored electronically and managed using database management systems (DBMS). Databases provide a systematic way to store, retrieve, update, and manage large volumes of information efficiently. They serve as a central repository for data used by various applications and users within an organization. There are two main types of database management systems: Relational Database Management Systems (RDBMS) and NoSQL databases. RDBMS, such as MySQL and Oracle, use a tabular structure with predefined schemas and support SQL for data manipulation. They ensure data integrity, enforce relationships between tables, and are suitable for structured data. NoSQL databases, like MongoDB and Cassandra, are non-relational and offer flexible schemas, scalability, and high performance for handling unstructured and semi-structured data. They are well-suited for handling large-scale distributed systems and dynamic data models.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    Relational Database Management System (RDBMS)
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    A Relational Database Management System (RDBMS) is a software system designed to create, manage, and manipulate relational databases. It provides a structured approach to store data in tables, where each table consists of rows and columns representing records and attributes, respectively. RDBMS offers a set of powerful features, such as data integrity enforcement, query optimization, and transaction management, ensuring reliable and efficient data storage and retrieval. It employs SQL (Structured Query Language) as the standard language for interacting with the database, allowing users to define, manipulate, and query data using a declarative approach. RDBMS excels in handling structured data, enforcing relationships between tables through primary keys and foreign keys, and supporting complex joins and data operations.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    NoSQL
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    NoSQL, which stands for "not only SQL" or "non-SQL," is a type of database management system that provides a flexible and scalable approach to storing and retrieving data. Unlike traditional relational databases, NoSQL databases are non-tabular and do not rely on fixed schemas. They are designed to handle unstructured and semi-structured data, such as documents, key-value pairs, graphs, and time-series data. NoSQL databases offer high performance and horizontal scalability by distributing data across multiple servers, allowing for seamless expansion as data volumes grow. They prioritize availability and partition tolerance over strong consistency, making them suitable for distributed and fault-tolerant systems. NoSQL databases provide a variety of data models and query languages tailored to specific use cases, offering developers the flexibility to choose the most appropriate solution for their application requirements.
+                  </p>
+                </article>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+
+      <div id="footer-container">
+        <footer>
+          <div id="footer-about">
+            <h3 class="footer-about-title">Tech Interview Primer</h3>
+            <p class="footer-about-p">Hi, I'm <a href="/pages/about.html">Kristen</a>! I'm a software engineer and student at <a target="_blank" href="https://www.lwtech.edu/">Lake Washington Institute of Technology</a>. I created this site to help people prepare for technical interviews. I hope you find it useful!</p>
+          </div>
+          <div id="footer-social">
+            <ul class="footer-social-ul">
+              <li class="footer-social-li"><a class="footer-social-link" target="_blank" href="https://www.linkedin.com/in/kristenkshi/"><img class="footer-social-icon" src="/assets/icons/linkedin.png" alt="LinkedIn" title="LinkedIn"></a></li>
+              <li class="footer-social-li"><a class="footer-social-link" target="_blank" href="https://twitter.com/kristenkshi"><img class="footer-social-icon" src="/assets/icons/twitter.png" alt="Twitter" title="Twitter"></a></li>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+  </body>
+</html>

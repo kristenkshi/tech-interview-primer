@@ -1,0 +1,146 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Tech Interview Primer - Availability Patterns</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body>
+    <div id="body-container">
+
+      <div id="header">
+        <div id="header-title">
+          <h1 class="header-title-text">Tech Interview Primer 📚</h1>
+        </div>
+        <div id="nav">
+          <nav>
+            <ul class="header-nav-ul">
+              <li class="header-nav-li"><a class="header-nav-link" href="/index.html">Home</a></li>
+              <li class="header-nav-li">
+                <div class="dropdown">
+                  <button class="dropbtn">Topics</button>
+                  <div class="dropdown-content">
+                    <a class="header-nav-link" href="/pages/topic-interviews-algorithms-data-structures.html">Interviews - Algorithms and Data Structures</a>
+                    <a class="header-nav-link" href="/pages/topic-interviews-system-design.html">Interviews - System Design</a>
+                    <a class="header-nav-link" href="/pages/topic-interviews-behavioral.html">Interviews - Behavioral</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-layers.html">Networking - Layers</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-dns.html">Networking - DNS</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-ip.html">Networking - IP</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-tcp-vs-udp.html">Networking - TCP vs. UDP</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-client-server-architecture.html">Networking - Client-Server Architecture</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-peer-to-peer-architecture.html">Networking - Peer-to-Peer Architecture</a>
+                    <a class="header-nav-link" href="/pages/topic-storage-databases.html">Storage - Databases</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-consistency-availability-partition-tolerance.html">System Design - Consistency, Availability, and Partition Tolerance</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-availability-patterns.html">System Design - Availability Patterns</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-consistency-patterns.html">System Design - Consistency Patterns</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-performance-vs-scalability.html">System Design - Performance vs. Scalability</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-latency-vs-throughput.html">System Design - Latency vs. Throughput</a>
+                    <a class="header-nav-link" href="/pages/topic-web-website-vs-web-browser.html">Web - Website vs. Web Browser</a>
+                    <a class="header-nav-link" href="/pages/topic-web-api-vs-web-service.html">Web - API vs. Web Service</a>
+                    <a class="header-nav-link" href="/pages/topic-web-http-https.html">Web - HTTP vs. HTTPS</a>
+                    <a class="header-nav-link" href="/pages/topic-web-routes.html">Web - Routes</a>
+                    <a class="header-nav-link" href="/pages/topic-web-rest-api-methods.html">Web - REST API Methods</a>
+                    <a class="header-nav-link" href="/pages/topic-web-rest-vs-grpc.html">Web - REST vs. gRPC</a>
+                  </div>
+                </div>
+              </li>
+              <li class="header-nav-li"><a class="header-nav-link" href="/pages/about.html">About the Author</a></li>
+              <li class="header-nav-li"><a class="header-nav-link" href="/pages/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div id="main-container">
+        <main>
+          <div class="main-section-container">
+            <section class="main-section">
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    Availability Patterns
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    Availability patterns are approaches used in system design to ensure continuous access to a service or application, even in the event of failures or disruptions. These patterns provide strategies for maintaining high availability and minimizing downtime.
+                  </p>
+                  <p class="main-section-article-p-text">
+                    These availability patterns offer different trade-offs in terms of resource utilization, consistency, and complexity. System designers must consider factors such as data consistency requirements, scalability needs, and recovery time objectives to choose the most suitable availability pattern for their specific use case.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    Failover vs. Replication in Availability
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    Failover is an availability pattern where a standby or backup system automatically takes over the workload and responsibilities of a failed primary system, ensuring uninterrupted service by swiftly transitioning to the backup system in case of failure. Replication, on the other hand, is an availability pattern that involves creating and maintaining identical copies of data or systems across multiple nodes or locations. It ensures data redundancy, load balancing, fault tolerance, and high availability by seamlessly switching to a replicated copy, allowing for continuous service even in the event of disruptions or outages. Both failover and replication play critical roles in ensuring system resilience and minimizing downtime in order to maintain consistent service availability.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    Active-Passive Failover Availability Pattern
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    In this pattern, a primary active node handles all requests while a passive standby node remains idle. If the active node fails, the standby node takes over and becomes the new active node, ensuring continuity of service. This pattern provides simple failover but may result in underutilization of resources during normal operations.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    Active-Active Failover Availability Pattern
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    This pattern involves multiple active nodes that distribute the workload, allowing each node to handle requests simultaneously. If one node fails, the remaining nodes continue serving requests, ensuring uninterrupted availability. Active-active failover patterns maximize resource utilization but require synchronization and coordination between nodes to maintain consistency.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    Master-Slave Replication Availability Pattern
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    In this pattern, a single master node handles read and write operations, while one or more slave nodes replicate the data from the master for read-only operations. If the master fails, one of the slaves can be promoted as the new master. Master-slave replication patterns provide fault tolerance and read scalability, but writes are limited to the master node.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    Master-Master Replication Availability Pattern
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    In this pattern, multiple nodes act as both master and slave, allowing read and write operations on any node. Changes made on one node are replicated to others. If one node fails, the remaining nodes continue to serve read and write operations. Master-master replication patterns provide high availability, scalability, and load balancing but require careful conflict resolution mechanisms to handle concurrent updates.
+                  </p>
+                </article>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+
+      <div id="footer-container">
+        <footer>
+          <div id="footer-about">
+            <h3 class="footer-about-title">Tech Interview Primer</h3>
+            <p class="footer-about-p">Hi, I'm <a href="/pages/about.html">Kristen</a>! I'm a software engineer and student at <a target="_blank" href="https://www.lwtech.edu/">Lake Washington Institute of Technology</a>. I created this site to help people prepare for technical interviews. I hope you find it useful!</p>
+          </div>
+          <div id="footer-social">
+            <ul class="footer-social-ul">
+              <li class="footer-social-li"><a class="footer-social-link" target="_blank" href="https://www.linkedin.com/in/kristenkshi/"><img class="footer-social-icon" src="/assets/icons/linkedin.png" alt="LinkedIn" title="LinkedIn"></a></li>
+              <li class="footer-social-li"><a class="footer-social-link" target="_blank" href="https://twitter.com/kristenkshi"><img class="footer-social-icon" src="/assets/icons/twitter.png" alt="Twitter" title="Twitter"></a></li>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Tech Interview Primer - Client-Server Architecture</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body>
+    <div id="body-container">
+
+      <div id="header">
+        <div id="header-title">
+          <h1 class="header-title-text">Tech Interview Primer 📚</h1>
+        </div>
+        <div id="nav">
+          <nav>
+            <ul class="header-nav-ul">
+              <li class="header-nav-li"><a class="header-nav-link" href="/index.html">Home</a></li>
+              <li class="header-nav-li">
+                <div class="dropdown">
+                  <button class="dropbtn">Topics</button>
+                  <div class="dropdown-content">
+                    <a class="header-nav-link" href="/pages/topic-interviews-algorithms-data-structures.html">Interviews - Algorithms and Data Structures</a>
+                    <a class="header-nav-link" href="/pages/topic-interviews-system-design.html">Interviews - System Design</a>
+                    <a class="header-nav-link" href="/pages/topic-interviews-behavioral.html">Interviews - Behavioral</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-layers.html">Networking - Layers</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-dns.html">Networking - DNS</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-ip.html">Networking - IP</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-tcp-vs-udp.html">Networking - TCP vs. UDP</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-client-server-architecture.html">Networking - Client-Server Architecture</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-peer-to-peer-architecture.html">Networking - Peer-to-Peer Architecture</a>
+                    <a class="header-nav-link" href="/pages/topic-storage-databases.html">Storage - Databases</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-consistency-availability-partition-tolerance.html">System Design - Consistency, Availability, and Partition Tolerance</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-availability-patterns.html">System Design - Availability Patterns</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-consistency-patterns.html">System Design - Consistency Patterns</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-performance-vs-scalability.html">System Design - Performance vs. Scalability</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-latency-vs-throughput.html">System Design - Latency vs. Throughput</a>
+                    <a class="header-nav-link" href="/pages/topic-web-website-vs-web-browser.html">Web - Website vs. Web Browser</a>
+                    <a class="header-nav-link" href="/pages/topic-web-api-vs-web-service.html">Web - API vs. Web Service</a>
+                    <a class="header-nav-link" href="/pages/topic-web-http-https.html">Web - HTTP vs. HTTPS</a>
+                    <a class="header-nav-link" href="/pages/topic-web-routes.html">Web - Routes</a>
+                    <a class="header-nav-link" href="/pages/topic-web-rest-api-methods.html">Web - REST API Methods</a>
+                    <a class="header-nav-link" href="/pages/topic-web-rest-vs-grpc.html">Web - REST vs. gRPC</a>
+                  </div>
+                </div>
+              </li>
+              <li class="header-nav-li"><a class="header-nav-link" href="/pages/about.html">About the Author</a></li>
+              <li class="header-nav-li"><a class="header-nav-link" href="/pages/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div id="main-container">
+        <main>
+          <div class="main-section-container">
+            <section class="main-section">
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    Client-Server Architecture
+                  </h2>
+                  <img class="article-inline-img" src="/assets/images/networking-client-server-architecture.png">
+                  <p class="main-section-article-p-text">
+                    Client-server architecture is a computing model where tasks and responsibilities are divided between two distinct entities: clients and servers. Clients are devices or software applications that request and consume resources or services from servers, while servers are systems or applications that provide resources, services, or data to clients upon their request.
+                  </p>
+                  <p class="main-section-article-p-text">
+                    In client-server architecture, clients and servers communicate over a network, such as the internet or a local area network (LAN), using various protocols and technologies. Clients initiate requests, and servers respond by processing the requests and sending the requested data or performing the requested actions, facilitating the exchange of information and services between the two entities.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    Client
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    A client, in the context of client-server architecture, refers to a device or software application that initiates a request for a specific service or resource. Clients are typically end-user devices such as computers, smartphones, or tablets, or software applications running on these devices. They send requests to servers to obtain data, access services, or perform specific functions.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    Server
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    A server, on the other hand, is a system or software application that responds to client requests by providing the requested resources, services, or data. Servers are designed to be highly available, scalable, and reliable to handle multiple client requests simultaneously. They often have more processing power, storage capacity, and specialized software or hardware configurations to efficiently fulfill client demands.
+                  </p>
+                </article>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+
+      <div id="footer-container">
+        <footer>
+          <div id="footer-about">
+            <h3 class="footer-about-title">Tech Interview Primer</h3>
+            <p class="footer-about-p">Hi, I'm <a href="/pages/about.html">Kristen</a>! I'm a software engineer and student at <a target="_blank" href="https://www.lwtech.edu/">Lake Washington Institute of Technology</a>. I created this site to help people prepare for technical interviews. I hope you find it useful!</p>
+          </div>
+          <div id="footer-social">
+            <ul class="footer-social-ul">
+              <li class="footer-social-li"><a class="footer-social-link" target="_blank" href="https://www.linkedin.com/in/kristenkshi/"><img class="footer-social-icon" src="/assets/icons/linkedin.png" alt="LinkedIn" title="LinkedIn"></a></li>
+              <li class="footer-social-li"><a class="footer-social-link" target="_blank" href="https://twitter.com/kristenkshi"><img class="footer-social-icon" src="/assets/icons/twitter.png" alt="Twitter" title="Twitter"></a></li>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+  </body>
+</html>

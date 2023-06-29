@@ -1,0 +1,114 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Tech Interview Primer - TCP vs. UDP</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body>
+    <div id="body-container">
+
+      <div id="header">
+        <div id="header-title">
+          <h1 class="header-title-text">Tech Interview Primer 📚</h1>
+        </div>
+        <div id="nav">
+          <nav>
+            <ul class="header-nav-ul">
+              <li class="header-nav-li"><a class="header-nav-link" href="/index.html">Home</a></li>
+              <li class="header-nav-li">
+                <div class="dropdown">
+                  <button class="dropbtn">Topics</button>
+                  <div class="dropdown-content">
+                    <a class="header-nav-link" href="/pages/topic-interviews-algorithms-data-structures.html">Interviews - Algorithms and Data Structures</a>
+                    <a class="header-nav-link" href="/pages/topic-interviews-system-design.html">Interviews - System Design</a>
+                    <a class="header-nav-link" href="/pages/topic-interviews-behavioral.html">Interviews - Behavioral</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-layers.html">Networking - Layers</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-dns.html">Networking - DNS</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-ip.html">Networking - IP</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-tcp-vs-udp.html">Networking - TCP vs. UDP</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-client-server-architecture.html">Networking - Client-Server Architecture</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-peer-to-peer-architecture.html">Networking - Peer-to-Peer Architecture</a>
+                    <a class="header-nav-link" href="/pages/topic-storage-databases.html">Storage - Databases</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-consistency-availability-partition-tolerance.html">System Design - Consistency, Availability, and Partition Tolerance</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-availability-patterns.html">System Design - Availability Patterns</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-consistency-patterns.html">System Design - Consistency Patterns</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-performance-vs-scalability.html">System Design - Performance vs. Scalability</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-latency-vs-throughput.html">System Design - Latency vs. Throughput</a>
+                    <a class="header-nav-link" href="/pages/topic-web-website-vs-web-browser.html">Web - Website vs. Web Browser</a>
+                    <a class="header-nav-link" href="/pages/topic-web-api-vs-web-service.html">Web - API vs. Web Service</a>
+                    <a class="header-nav-link" href="/pages/topic-web-http-https.html">Web - HTTP vs. HTTPS</a>
+                    <a class="header-nav-link" href="/pages/topic-web-routes.html">Web - Routes</a>
+                    <a class="header-nav-link" href="/pages/topic-web-rest-api-methods.html">Web - REST API Methods</a>
+                    <a class="header-nav-link" href="/pages/topic-web-rest-vs-grpc.html">Web - REST vs. gRPC</a>
+                  </div>
+                </div>
+              </li>
+              <li class="header-nav-li"><a class="header-nav-link" href="/pages/about.html">About the Author</a></li>
+              <li class="header-nav-li"><a class="header-nav-link" href="/pages/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div id="main-container">
+        <main>
+          <div class="main-section-container">
+            <section class="main-section">
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    TCP vs. UDP Networking Protocols
+                  </h2>
+                  <img class="article-inline-img" src="/assets/images/networking-tcp-vs-udp.png">
+                  <p class="main-section-article-p-text">
+                    TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) are transport layer protocols in computer networking. TCP provides reliable, connection-oriented communication by establishing a virtual connection between two devices, ensuring data integrity, sequencing, and flow control. UDP, on the other hand, offers a lightweight, connectionless communication method, prioritizing low overhead and high-speed data transmission, but without the built-in reliability features of TCP. TCP is commonly used for applications requiring guaranteed data delivery and error recovery, while UDP is favored for real-time communication, multimedia streaming, and scenarios where speed and low latency are prioritized over reliability.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    TCP (Transmission Control Protocol)
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    TCP (Transmission Control Protocol) is a widely used network protocol that operates at the transport layer of the Internet Protocol Suite. It provides reliable, connection-oriented communication between devices in a network. TCP ensures the delivery of data packets by establishing a virtual circuit between a sender and a receiver. It breaks the data into smaller units called segments and assigns sequence numbers to them, allowing for ordered and error-checked transmission. TCP uses a combination of acknowledgment and retransmission mechanisms to guarantee the reliable delivery of data, retransmitting lost or damaged segments. It also incorporates flow control and congestion control techniques to manage the rate of data transmission and prevent network congestion.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    UDP (User Datagram Protocol)
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    UDP (User Datagram Protocol) is a network protocol that operates at the transport layer of the Internet Protocol Suite. Unlike TCP, UDP provides a connectionless communication method, where data packets, called datagrams, are sent without establishing a dedicated connection between sender and receiver. UDP is often used for real-time applications, such as audio and video streaming, online gaming, and DNS queries, where speed and efficiency are prioritized over reliability. It does not guarantee the delivery or ordering of data packets, as it lacks built-in error checking, retransmission, and acknowledgment mechanisms. UDP is lightweight and faster than TCP since it avoids the overhead associated with establishing and maintaining a connection. However, it leaves error detection and recovery to the application layer protocols that utilize UDP for communication.
+                  </p>
+                </article>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+
+      <div id="footer-container">
+        <footer>
+          <div id="footer-about">
+            <h3 class="footer-about-title">Tech Interview Primer</h3>
+            <p class="footer-about-p">Hi, I'm <a href="/pages/about.html">Kristen</a>! I'm a software engineer and student at <a target="_blank" href="https://www.lwtech.edu/">Lake Washington Institute of Technology</a>. I created this site to help people prepare for technical interviews. I hope you find it useful!</p>
+          </div>
+          <div id="footer-social">
+            <ul class="footer-social-ul">
+              <li class="footer-social-li"><a class="footer-social-link" target="_blank" href="https://www.linkedin.com/in/kristenkshi/"><img class="footer-social-icon" src="/assets/icons/linkedin.png" alt="LinkedIn" title="LinkedIn"></a></li>
+              <li class="footer-social-li"><a class="footer-social-link" target="_blank" href="https://twitter.com/kristenkshi"><img class="footer-social-icon" src="/assets/icons/twitter.png" alt="Twitter" title="Twitter"></a></li>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+  </body>
+</html>

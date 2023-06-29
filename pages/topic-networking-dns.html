@@ -1,0 +1,113 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Tech Interview Primer - DNS</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body>
+    <div id="body-container">
+
+      <div id="header">
+        <div id="header-title">
+          <h1 class="header-title-text">Tech Interview Primer 📚</h1>
+        </div>
+        <div id="nav">
+          <nav>
+            <ul class="header-nav-ul">
+              <li class="header-nav-li"><a class="header-nav-link" href="/index.html">Home</a></li>
+              <li class="header-nav-li">
+                <div class="dropdown">
+                  <button class="dropbtn">Topics</button>
+                  <div class="dropdown-content">
+                    <a class="header-nav-link" href="/pages/topic-interviews-algorithms-data-structures.html">Interviews - Algorithms and Data Structures</a>
+                    <a class="header-nav-link" href="/pages/topic-interviews-system-design.html">Interviews - System Design</a>
+                    <a class="header-nav-link" href="/pages/topic-interviews-behavioral.html">Interviews - Behavioral</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-layers.html">Networking - Layers</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-dns.html">Networking - DNS</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-ip.html">Networking - IP</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-tcp-vs-udp.html">Networking - TCP vs. UDP</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-client-server-architecture.html">Networking - Client-Server Architecture</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-peer-to-peer-architecture.html">Networking - Peer-to-Peer Architecture</a>
+                    <a class="header-nav-link" href="/pages/topic-storage-databases.html">Storage - Databases</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-consistency-availability-partition-tolerance.html">System Design - Consistency, Availability, and Partition Tolerance</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-availability-patterns.html">System Design - Availability Patterns</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-consistency-patterns.html">System Design - Consistency Patterns</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-performance-vs-scalability.html">System Design - Performance vs. Scalability</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-latency-vs-throughput.html">System Design - Latency vs. Throughput</a>
+                    <a class="header-nav-link" href="/pages/topic-web-website-vs-web-browser.html">Web - Website vs. Web Browser</a>
+                    <a class="header-nav-link" href="/pages/topic-web-api-vs-web-service.html">Web - API vs. Web Service</a>
+                    <a class="header-nav-link" href="/pages/topic-web-http-https.html">Web - HTTP vs. HTTPS</a>
+                    <a class="header-nav-link" href="/pages/topic-web-routes.html">Web - Routes</a>
+                    <a class="header-nav-link" href="/pages/topic-web-rest-api-methods.html">Web - REST API Methods</a>
+                    <a class="header-nav-link" href="/pages/topic-web-rest-vs-grpc.html">Web - REST vs. gRPC</a>
+                  </div>
+                </div>
+              </li>
+              <li class="header-nav-li"><a class="header-nav-link" href="/pages/about.html">About the Author</a></li>
+              <li class="header-nav-li"><a class="header-nav-link" href="/pages/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div id="main-container">
+        <main>
+          <div class="main-section-container">
+            <section class="main-section">
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    DNS
+                  </h2>
+                  <img class="article-inline-img" src="/assets/images/networking-dns.png">
+                  <p class="main-section-article-p-text">
+                    DNS (Domain Name System) is a distributed hierarchical system that translates human-readable domain names, such as www.example.com, into machine-readable IP addresses, like 192.0.2.1, enabling efficient communication between devices on computer networks. It acts as a phonebook of the internet, mapping domain names to their corresponding IP addresses.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    What happens when you type a URL into a browser?
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    When a user enters a domain name into a web browser, the DNS resolution process begins. The browser sends a DNS query to the configured DNS resolver (typically provided by the internet service provider or a public DNS server). The resolver checks its cache for the corresponding IP address. If it doesn't have the information, it sends queries to other DNS servers in a recursive manner.
+                  </p>
+                  <p class="main-section-article-p-text">
+                    Suppose the resolver doesn't have the IP address for "www.example.com". It starts by querying the root DNS servers, which direct it to the top-level domain (TLD) servers responsible for ".com". The resolver then contacts the TLD servers to obtain the authoritative DNS server for "example.com". Finally, the resolver queries the authoritative DNS server to retrieve the IP address for "www.example.com".
+                  </p>
+                  <p class="main-section-article-p-text">
+                    Once the resolver receives the IP address, it caches the information for future use and returns it to the browser. The browser can then establish a connection to the web server at the IP address obtained through DNS resolution, allowing the user to access the desired website.
+                  </p>
+                  <p class="main-section-article-p-text">
+                    In this example, DNS resolution is used to translate the domain name "www.example.com" into its corresponding IP address, facilitating the connection between the user's browser and the web server hosting the example.com website.
+                  </p>
+                </article>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+
+      <div id="footer-container">
+        <footer>
+          <div id="footer-about">
+            <h3 class="footer-about-title">Tech Interview Primer</h3>
+            <p class="footer-about-p">Hi, I'm <a href="/pages/about.html">Kristen</a>! I'm a software engineer and student at <a target="_blank" href="https://www.lwtech.edu/">Lake Washington Institute of Technology</a>. I created this site to help people prepare for technical interviews. I hope you find it useful!</p>
+          </div>
+          <div id="footer-social">
+            <ul class="footer-social-ul">
+              <li class="footer-social-li"><a class="footer-social-link" target="_blank" href="https://www.linkedin.com/in/kristenkshi/"><img class="footer-social-icon" src="/assets/icons/linkedin.png" alt="LinkedIn" title="LinkedIn"></a></li>
+              <li class="footer-social-li"><a class="footer-social-link" target="_blank" href="https://twitter.com/kristenkshi"><img class="footer-social-icon" src="/assets/icons/twitter.png" alt="Twitter" title="Twitter"></a></li>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+  </body>
+</html>

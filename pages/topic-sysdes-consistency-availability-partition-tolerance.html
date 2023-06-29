@@ -1,0 +1,164 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Tech Interview Primer - Consistency, Availability, and Partition Tolerance</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body>
+    <div id="body-container">
+
+      <div id="header">
+        <div id="header-title">
+          <h1 class="header-title-text">Tech Interview Primer 📚</h1>
+        </div>
+        <div id="nav">
+          <nav>
+            <ul class="header-nav-ul">
+              <li class="header-nav-li"><a class="header-nav-link" href="/index.html">Home</a></li>
+              <li class="header-nav-li">
+                <div class="dropdown">
+                  <button class="dropbtn">Topics</button>
+                  <div class="dropdown-content">
+                    <a class="header-nav-link" href="/pages/topic-interviews-algorithms-data-structures.html">Interviews - Algorithms and Data Structures</a>
+                    <a class="header-nav-link" href="/pages/topic-interviews-system-design.html">Interviews - System Design</a>
+                    <a class="header-nav-link" href="/pages/topic-interviews-behavioral.html">Interviews - Behavioral</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-layers.html">Networking - Layers</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-dns.html">Networking - DNS</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-ip.html">Networking - IP</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-tcp-vs-udp.html">Networking - TCP vs. UDP</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-client-server-architecture.html">Networking - Client-Server Architecture</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-peer-to-peer-architecture.html">Networking - Peer-to-Peer Architecture</a>
+                    <a class="header-nav-link" href="/pages/topic-storage-databases.html">Storage - Databases</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-consistency-availability-partition-tolerance.html">System Design - Consistency, Availability, and Partition Tolerance</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-availability-patterns.html">System Design - Availability Patterns</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-consistency-patterns.html">System Design - Consistency Patterns</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-performance-vs-scalability.html">System Design - Performance vs. Scalability</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-latency-vs-throughput.html">System Design - Latency vs. Throughput</a>
+                    <a class="header-nav-link" href="/pages/topic-web-website-vs-web-browser.html">Web - Website vs. Web Browser</a>
+                    <a class="header-nav-link" href="/pages/topic-web-api-vs-web-service.html">Web - API vs. Web Service</a>
+                    <a class="header-nav-link" href="/pages/topic-web-http-https.html">Web - HTTP vs. HTTPS</a>
+                    <a class="header-nav-link" href="/pages/topic-web-routes.html">Web - Routes</a>
+                    <a class="header-nav-link" href="/pages/topic-web-rest-api-methods.html">Web - REST API Methods</a>
+                    <a class="header-nav-link" href="/pages/topic-web-rest-vs-grpc.html">Web - REST vs. gRPC</a>
+                  </div>
+                </div>
+              </li>
+              <li class="header-nav-li"><a class="header-nav-link" href="/pages/about.html">About the Author</a></li>
+              <li class="header-nav-li"><a class="header-nav-link" href="/pages/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div id="main-container">
+        <main>
+          <div class="main-section-container">
+            <section class="main-section">
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    Consistency, Availability, and Partition Tolerance
+                  </h2>
+                  <img class="article-inline-img" src="/assets/images/sysdes-consistency-availability-partition-tolerance.png">
+                  <p class="main-section-article-p-text">
+                    Consistency, availability, and partition tolerance are crucial considerations in system design because they address fundamental aspects of distributed systems. Consistency ensures data integrity and accuracy, availability guarantees uninterrupted access to the system, and partition tolerance enables the system to handle network failures and scale horizontally. By considering these factors, system designers can make informed trade-offs to meet specific requirements and achieve desired performance and reliability goals.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    Consistency
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    Consistency refers to the property of a distributed system where all nodes or replicas have the same data at any given point in time. In a consistent system, data updates are propagated to all replicas, ensuring that any subsequent read operation will return the latest updated value. Consistency guarantees data integrity and ensures that the system behaves as if it were a single, consistent database.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    Availability
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    Availability refers to the property of a distributed system where it remains operational and accessible to users even in the presence of failures or network partitions. An available system provides a timely response to client requests, and users can access and perform operations on the system without interruption. High availability is achieved by employing redundancy, fault-tolerant mechanisms, and automated failure recovery.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    Partition Tolerance
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    Partition Tolerance refers to the ability of a distributed system to continue functioning and maintaining consistency despite network partitions or communication failures that may occur between nodes. In a partitioned network, where nodes are separated and cannot communicate with each other, a partition-tolerant system ensures that the system can still operate independently and handle data updates or requests within each partition.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    CAP Theorem
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    The CAP theorem, also known as Brewer's theorem, states that it is impossible for a distributed system to simultaneously achieve Consistency (C), Availability (A), and Partition Tolerance (P). According to the theorem, in the presence of a network partition, a distributed system can only guarantee two out of the three properties. The CAP theorem helps in understanding the trade-offs that need to be made when designing and building distributed systems.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    CP (Consistency and Partition Tolerance)
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    CP (Consistency and Partition Tolerance) is a design choice that prioritizes Consistency and Partition Tolerance over Availability. In a CP system, when a network partition occurs, the system sacrifices availability to maintain strong consistency across all nodes. CP systems are commonly used in scenarios where data integrity and correctness are critical, such as financial systems or applications dealing with sensitive data.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    AP (Availability and Partition Tolerance) 
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    AP (Availability and Partition Tolerance) is a design choice that prioritizes Availability and Partition Tolerance over strong Consistency. In an AP system, the system focuses on maintaining high availability and can continue to operate even in the presence of network partitions. AP systems sacrifice strong consistency and allow for eventual consistency or relaxed consistency models, where different replicas may have slightly divergent views of the data. AP systems are often used in scenarios where high availability and scalability are crucial, such as content delivery networks or social media platforms.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    CP vs. AP
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    It's important to note that the CAP theorem and the choices between CP and AP are design principles, and different distributed systems may make different trade-offs based on specific use cases and requirements.
+                  </p>
+                </article>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+
+      <div id="footer-container">
+        <footer>
+          <div id="footer-about">
+            <h3 class="footer-about-title">Tech Interview Primer</h3>
+            <p class="footer-about-p">Hi, I'm <a href="/pages/about.html">Kristen</a>! I'm a software engineer and student at <a target="_blank" href="https://www.lwtech.edu/">Lake Washington Institute of Technology</a>. I created this site to help people prepare for technical interviews. I hope you find it useful!</p>
+          </div>
+          <div id="footer-social">
+            <ul class="footer-social-ul">
+              <li class="footer-social-li"><a class="footer-social-link" target="_blank" href="https://www.linkedin.com/in/kristenkshi/"><img class="footer-social-icon" src="/assets/icons/linkedin.png" alt="LinkedIn" title="LinkedIn"></a></li>
+              <li class="footer-social-li"><a class="footer-social-link" target="_blank" href="https://twitter.com/kristenkshi"><img class="footer-social-icon" src="/assets/icons/twitter.png" alt="Twitter" title="Twitter"></a></li>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,154 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Tech Interview Primer - REST API Methods</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body>
+    <div id="body-container">
+
+      <div id="header">
+        <div id="header-title">
+          <h1 class="header-title-text">Tech Interview Primer 📚</h1>
+        </div>
+        <div id="nav">
+          <nav>
+            <ul class="header-nav-ul">
+              <li class="header-nav-li"><a class="header-nav-link" href="/index.html">Home</a></li>
+              <li class="header-nav-li">
+                <div class="dropdown">
+                  <button class="dropbtn">Topics</button>
+                  <div class="dropdown-content">
+                    <a class="header-nav-link" href="/pages/topic-interviews-algorithms-data-structures.html">Interviews - Algorithms and Data Structures</a>
+                    <a class="header-nav-link" href="/pages/topic-interviews-system-design.html">Interviews - System Design</a>
+                    <a class="header-nav-link" href="/pages/topic-interviews-behavioral.html">Interviews - Behavioral</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-layers.html">Networking - Layers</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-dns.html">Networking - DNS</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-ip.html">Networking - IP</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-tcp-vs-udp.html">Networking - TCP vs. UDP</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-client-server-architecture.html">Networking - Client-Server Architecture</a>
+                    <a class="header-nav-link" href="/pages/topic-networking-peer-to-peer-architecture.html">Networking - Peer-to-Peer Architecture</a>
+                    <a class="header-nav-link" href="/pages/topic-storage-databases.html">Storage - Databases</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-consistency-availability-partition-tolerance.html">System Design - Consistency, Availability, and Partition Tolerance</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-availability-patterns.html">System Design - Availability Patterns</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-consistency-patterns.html">System Design - Consistency Patterns</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-performance-vs-scalability.html">System Design - Performance vs. Scalability</a>
+                    <a class="header-nav-link" href="/pages/topic-sysdes-latency-vs-throughput.html">System Design - Latency vs. Throughput</a>
+                    <a class="header-nav-link" href="/pages/topic-web-website-vs-web-browser.html">Web - Website vs. Web Browser</a>
+                    <a class="header-nav-link" href="/pages/topic-web-api-vs-web-service.html">Web - API vs. Web Service</a>
+                    <a class="header-nav-link" href="/pages/topic-web-http-https.html">Web - HTTP vs. HTTPS</a>
+                    <a class="header-nav-link" href="/pages/topic-web-routes.html">Web - Routes</a>
+                    <a class="header-nav-link" href="/pages/topic-web-rest-api-methods.html">Web - REST API Methods</a>
+                    <a class="header-nav-link" href="/pages/topic-web-rest-vs-grpc.html">Web - REST vs. gRPC</a>
+                  </div>
+                </div>
+              </li>
+              <li class="header-nav-li"><a class="header-nav-link" href="/pages/about.html">About the Author</a></li>
+              <li class="header-nav-li"><a class="header-nav-link" href="/pages/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div id="main-container">
+        <main>
+          <div class="main-section-container">
+            <section class="main-section">
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    REST API Methods
+                  </h2>
+                  <img class="article-inline-img" src="/assets/images/web-rest-api-methods.png">
+                  <p class="main-section-article-p-text">
+                    REST API methods are the standard HTTP methods used to perform operations on resources in a RESTful architecture. These methods define the type of action to be taken on a resource and facilitate communication between clients and servers. Each method has a specific purpose and semantics that determine how the server should handle the request and what the expected outcome will be.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    GET
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    The GET method is used to retrieve a representation of a resource or a collection of resources from the server. It is a safe and idempotent operation, meaning it should not modify the server's state or have any side effects. Clients use GET to read and fetch data, receiving the requested information in the response body. For example, a GET request to "/users" might return a list of all users registered in the system.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    POST
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    The POST method is used to submit data to the server to create a new resource. It is not idempotent, meaning multiple identical requests can result in different outcomes. Clients use POST to send data as the request body, and the server processes this data to create a new resource. For instance, a POST request to "/users" with a JSON payload can create a new user record in the server's database.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    PUT
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    The PUT method is used to update an existing resource on the server. It replaces the entire resource with the new representation provided in the request. PUT requests are idempotent, meaning multiple identical requests have the same outcome as a single request. Clients use PUT to send the updated representation of a resource, typically by providing the full object or document. For example, a PUT request to "/users/123" would update the user with the ID 123 with the new data provided in the request body.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    PATCH
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    The PATCH method is similar to PUT but is used to partially modify an existing resource. It applies partial updates to the resource, modifying only the specified fields or properties. Like PUT, PATCH requests are idempotent. Clients use PATCH to send a set of changes, expressed as differences or instructions, to update the resource. For instance, a PATCH request to "/users/123" with a JSON payload containing only the fields to be updated would modify only those fields of the user with ID 123.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    DELETE
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    The DELETE method is used to remove a resource from the server. It instructs the server to delete the specified resource. DELETE requests are idempotent, meaning multiple identical requests have the same outcome as a single request. Clients use DELETE to indicate their intention to remove a specific resource. For example, a DELETE request to "/users/123" would delete the user with the ID 123 from the server.
+                  </p>
+                </article>
+              </div>
+              <div class="main-section-article-container">
+                <article class="main-section-article">
+                  <h2 class="main-section-article-header-text">
+                    Summary of REST API Methods
+                  </h2>
+                  <p class="main-section-article-p-text">
+                    In summary, REST API methods define the type of action to be performed on a resource. GET retrieves a resource, POST creates a new resource, PUT replaces an existing resource, PATCH partially modifies a resource, and DELETE removes a resource from the server. Each method has specific characteristics and is used for different purposes in RESTful architectures.
+                  </p>
+                </article>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+
+      <div id="footer-container">
+        <footer>
+          <div id="footer-about">
+            <h3 class="footer-about-title">Tech Interview Primer</h3>
+            <p class="footer-about-p">Hi, I'm <a href="/pages/about.html">Kristen</a>! I'm a software engineer and student at <a target="_blank" href="https://www.lwtech.edu/">Lake Washington Institute of Technology</a>. I created this site to help people prepare for technical interviews. I hope you find it useful!</p>
+          </div>
+          <div id="footer-social">
+            <ul class="footer-social-ul">
+              <li class="footer-social-li"><a class="footer-social-link" target="_blank" href="https://www.linkedin.com/in/kristenkshi/"><img class="footer-social-icon" src="/assets/icons/linkedin.png" alt="LinkedIn" title="LinkedIn"></a></li>
+              <li class="footer-social-li"><a class="footer-social-link" target="_blank" href="https://twitter.com/kristenkshi"><img class="footer-social-icon" src="/assets/icons/twitter.png" alt="Twitter" title="Twitter"></a></li>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+  </body>
+</html>
